@@ -1,4 +1,4 @@
-package com.spittr.config;
+package spittr.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

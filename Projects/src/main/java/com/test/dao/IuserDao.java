@@ -1,4 +1,9 @@
 package com.test.dao;
 
-public class IuserDao {
+import com.test.domain.User;
+
+import java.util.List;
+
+public interface IuserDao {
+    List<User> findAlll();
 }

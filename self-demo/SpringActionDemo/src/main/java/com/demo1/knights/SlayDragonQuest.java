@@ -1,4 +1,4 @@
-package com.demo1;
+package com.demo1.knights;
 
 import java.io.PrintStream;
 

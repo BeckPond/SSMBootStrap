@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script type="text/javascript">
+        //找到元素
+        //绑定事件
+        //
+        window.onload=function () {//没有将识别不了元素
+            var btn = document.getElementById("btnID");
+            btn.onclick =function(){
+                alert("HelloWorld")
+            }
+
+        }
+
+
+
+
+    </script>
 </head>
 <body>
-$END$
+    <button id="btnID" >SayHello</button>
+
 </body>
 </html>

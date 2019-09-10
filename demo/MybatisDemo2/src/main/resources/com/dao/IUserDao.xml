@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.IUserDao" >
+    <!--配置查询结果的列名和实体类的属名的对应关系-->
+    <resultMap id="userMap" type="com.domain.User">
+        <!--主键字段对应-->
+        <id property="id" column="id"></id>
+        <!--非主键字段对应-->
+        <result property="username" column="username"></result>
+        <result property="sex" column="sex"></result>
+        <result property="address" column="address"></result>
+        <result property="birthday" column="birthday"></result>
+    </resultMap>
+
+
+
+    <select id="findAll" resultMap = "userMap"><!--resultType="com.domain.User"-->
+        <!--select id as UserId,username as userName...-->
+        select *from user
+    </select>
+
+    <insert id="saveUser" parameterType="com.domain.User">
+        insert into user(username,address,sex,birthday)values(#{username},#{address},#{sex},#{birthday});
+    </insert>
+
+    <update id="updateUser" parameterType="com.domain.User">
+        update user set username = #{username},address=#{address},sex=#{sex},birthday=#{birthday} where id = #{id};
+    </update>
+
+    <delete id="deleteUser" parameterType="Integer">
+        delete from user where id =#{uid}
+    </delete>
+    
+    <select id="findbyId" parameterType="INT" resultType="com.domain.User">
+        select * from user where id =#{uid}
+    </select>
+
+    <select id="findbyName" parameterType="String" resultType="com.domain.User">
+        select * from user where username like #{name}
+    </select>
+
+    <select id="findTotal" resultType="int">
+        select count(id) from user
+    </select>
+
+    <select id="findUserByVo" parameterType="com.domain.QueryVo" resultType="com.domain.User">
+        select * from user where username like #{user.username}
+    </select>
+</mapper>

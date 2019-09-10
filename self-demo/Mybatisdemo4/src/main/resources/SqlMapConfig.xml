@@ -20,5 +20,6 @@
     
     <mappers>
         <mapper resource="com/how2java/pojo/Category.xml"></mapper>
+        <mapper resource="com/how2java/pojo/Product.xml"></mapper>
     </mappers>
 </configuration>

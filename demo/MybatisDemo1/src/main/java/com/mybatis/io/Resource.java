@@ -2,9 +2,8 @@ package com.mybatis.io;
 
 import java.io.InputStream;
 
-public class Resources {
+public class Resource {
     public static InputStream getResourceAsStream(String filePath){
-        return Resources.class.getClassLoader().getResourceAsStream(filePath);
-        )
+        return Resource.class.getClassLoader().getResourceAsStream(filePath);
     }
 }

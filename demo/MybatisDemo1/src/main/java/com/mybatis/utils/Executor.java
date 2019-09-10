@@ -1,6 +1,7 @@
-package com.itheima.mybatis.sqlsession.utils;
+package com.mybatis.utils;
 
-import com.itheima.mybatis.sqlsession.mappers.Mapper;
+import com.mybatis.cfg.Mapper;
+import com.mybatis.sqlsession.*;
 
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;

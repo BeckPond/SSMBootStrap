@@ -1,5 +1,5 @@
-package com.demo1;
+package com.demo1.knights;
 
 public interface Knight {
-    void 
+    void embarkOnQuest();
 }

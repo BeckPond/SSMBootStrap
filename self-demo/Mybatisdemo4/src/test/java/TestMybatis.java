@@ -34,15 +34,10 @@ public class TestMybatis {
 
     @Test
     public void listCategory(){
-        List<Category> cs =session.selectList("listCategory");
-        for (Category c: cs
-             ) {
-            System.out.println(c);
-            List<Product> ps = c.getProducts();
-            for (Product p:ps
-                 ) {
-                System.out.println("\t" +p);
-            }
+        List<Product> ps =session.selectList("listProduct");
+        for (Product p:ps
+        ) {
+            System.out.println(p+ "对应的分类是 \t" +p.getCategory());
         }
     }
 }

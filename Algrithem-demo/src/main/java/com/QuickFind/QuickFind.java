@@ -1,4 +1,4 @@
-package com.demo1;
+package com.QuickFind;
 
 public class QuickFind {
     public int[] id;
