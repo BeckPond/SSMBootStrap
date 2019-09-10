@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type = "text/javascript">
+        window.onload=function () {
+            var btn = document.getElementById("btnId");
+            btn.onclick = function(){
+                alert("hello");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<form action="successsubmit.html">
+    username:<input type="text" name = "username" value=""123/>
+    password:<input type="password" name ="pw" value = "123"/>
+    <input type="submit" />
+    <button id ="btnId">SayHello</button>
+</form>
+</body>
+</html>
